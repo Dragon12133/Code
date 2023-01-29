@@ -1,0 +1,33 @@
+import webbrowser
+
+url = []
+x = 0
+chrome_path = 'C:/Program FIles (x86)/Google/Chrome/Application/chrome.exe %s'
+print("Ireton or O'Connell? ")
+school = input()
+if school == "Ireton" or school == "ireton":
+    Entertain = input("Entertainment: ")
+    Work = input("Work: ")
+    BCdoc = input("Blank doc: ")
+    if Entertain == "Yes" or Entertain == 'yes':
+        url.append('https://www.youtube.com/')
+    if Work == "Yes" or Work == "yes":
+        url.append('https://bishopireton.myschoolapp.com/app#login')
+        url.append('https://library.bishopireton.org/#')
+    if BCdoc == "Yes" or BCdoc == "yes":
+        url.append('https://doc.new')
+
+if school == "O'Connell" or school == "oconnell":
+    Entertain = input("Entertainment: ")
+    Work = input("Work: ")
+    BCdoc = input("Blank doc: ")
+    if Entertain == "Yes" or Entertain == 'yes':
+        url.append('https://www.youtube.com/')
+    if Work == "Yes" or Work == "yes":
+        url.append('https://bishopoconnell.instructure.com/')
+        url.append('https://auth.orc.scoolaid.net/bin/listdb?sysCode=bohs')
+    if BCdoc == "Yes" or BCdoc == "yes":
+        url.append('https://doc.new')
+while x != len(url):
+    webbrowser.get(chrome_path).open(url[x])
+    x = x + 1
